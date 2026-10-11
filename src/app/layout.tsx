@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Marquee from "./components/Marquee";
+import Footer from "./components/Footer";
+import { Hind_Siliguri } from "next/font/google";
+import { Suspense } from "react";
+import { Toaster } from "react-hot-toast";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const hindSiliguri = Hind_Siliguri({
+  subsets: ["latin", "bengali"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-hind-siliguri",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -22,16 +22,22 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en" data-theme = "light"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="bn" data-theme="light"
+      className={`${hindSiliguri.className} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-base-300">
+      <body className="min-h-full flex flex-col bg-[#F4F7F4]">
 
         <Header />
-        <Marquee />
+        <Suspense fallback={<p>Loading products...</p>}>
+          <Marquee />
+        </Suspense>
 
-        {children}
+        <main className="flex-1">
+          {children}
+        </main>
+        <Toaster />
 
+        <Footer />
 
       </body>
     </html>
