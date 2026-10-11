@@ -47,12 +47,8 @@ const ProfilePage = () => {
 
 
                 <div className="mb-6 sm:mb-8">
-                    <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">
-                        আমার প্রোফাইল
-                    </h2>
-                    <p className="mt-2 text-sm text-gray-500 sm:text-base">
-                        আপনার অ্যাকাউন্টের তথ্য এখানে দেখুন।
-                    </p>
+                    <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">আমার প্রোফাইল</h2>
+                    <p className="mt-2 text-sm text-gray-500 sm:text-base">আপনার অ্যাকাউন্টের তথ্য এখানে দেখুন।</p>
                 </div>
 
 
@@ -81,12 +77,8 @@ const ProfilePage = () => {
                             <h3 className="break-words text-xl font-bold text-gray-900 sm:text-2xl">
                                 {user.name}
                             </h3>
-                            <p className="mt-1 break-all text-sm text-gray-500">
-                                {user.email}
-                            </p>
-                            <p className="mt-2 text-xs font-medium text-green-700">
-                                BazarDor সদস্য
-                            </p>
+                            <p className="mt-1 break-all text-sm text-gray-500">{user.email}</p>
+                            <p className="mt-2 text-xs font-medium text-green-700">BazarDor সদস্য</p>
                         </div>
 
 
