@@ -22,19 +22,12 @@ interface Daata {
 }
 
 const ProductContant = async () => {
-  const res = await fetch(
-    "https://api.abcz.workers.dev/api/bazardor/products"
-  );
+  const res = await fetch("https://api.abcz.workers.dev/api/bazardor/products");
 
   const datas: Daata[] = await res.json();
 
-  const increasedProducts = datas
-    .filter((data) => data.change.dir === "up")
-    .slice(0, 6);
-
-  const decreasedProducts = datas
-    .filter((data) => data.change.dir === "down")
-    .slice(0, 6);
+  const increasedProducts = datas.filter((data) => data.change.dir === "up").slice(0, 6);
+  const decreasedProducts = datas.filter((data) => data.change.dir === "down").slice(0, 6);
 
   return (
     <main className="w-full min-w-0">
@@ -57,12 +50,8 @@ const ProductContant = async () => {
 
 
       <section className="mx-auto my-6 w-full max-w-7xl px-4 sm:my-8 sm:px-6 lg:my-10 lg:px-8">
-        <div className="mb-4 flex items-center gap-2 sm:mb-5">
-          <IoCaretDownSharp className="shrink-0 text-xl text-green-700 sm:text-2xl" />
-
-          <h2 className="text-lg font-bold sm:text-xl lg:text-2xl">
-            আজকে দাম কমেছে
-          </h2>
+        <div className="mb-4 flex items-center gap-2 sm:mb-5"><IoCaretDownSharp className="shrink-0 text-xl text-green-700 sm:text-2xl" />
+          <h2 className="text-lg font-bold sm:text-xl lg:text-2xl">আজকে দাম কমেছে</h2>
         </div>
 
         <div className="grid grid-cols-1 gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">

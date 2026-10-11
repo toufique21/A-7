@@ -18,13 +18,7 @@ const NavLinks = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const res = await fetch(
-          "https://api.abcz.workers.dev/api/bazardor/categories"
-        );
-
-        if (!res.ok) {
-          throw new Error("Failed to fetch categories");
-        }
+        const res = await fetch("https://api.abcz.workers.dev/api/bazardor/categories");
 
         const result = await res.json();
 

@@ -49,13 +49,7 @@ const Header = () => {
       </div>
 
 
-      <Suspense
-        fallback={
-          <div className="px-4 py-3 text-center text-sm text-gray-500">
-            Loading navigation...
-          </div>
-        }
-      >
+      <Suspense fallback={<div className="px-4 py-3 text-center text-sm text-gray-500">Loading navigation...</div>}>
         <NavLinks />
       </Suspense>
     </header>
