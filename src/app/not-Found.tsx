@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const NotFound = () => {
+const notFound = () => {
     return (
         <div className="min-h-[70vh] flex items-center justify-center px-6">
             <div className="text-center max-w-md">
@@ -11,7 +11,7 @@ const NotFound = () => {
                 </h1>
 
                 <p className="text-gray-500 mb-8">
-                    Sorry, the page you are looking for doesn&apos;t exist
+                    Sorry, the page you are looking for does not exist
                     or may have been moved.
                 </p>
 
@@ -27,5 +27,5 @@ const NotFound = () => {
     );
 };
 
-export default NotFound;
+export default notFound;
 

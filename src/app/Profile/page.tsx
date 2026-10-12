@@ -2,6 +2,7 @@
 
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound, useRouter } from "next/navigation";
 
 const ProfilePage = () => {
@@ -74,19 +75,15 @@ const ProfilePage = () => {
 
 
                         <div className="min-w-0 flex-1 text-center sm:text-left">
-                            <h3 className="break-words text-xl font-bold text-gray-900 sm:text-2xl">
-                                {user.name}
-                            </h3>
+                            <h3 className="break-words text-xl font-bold text-gray-900 sm:text-2xl">{user.name}</h3>
                             <p className="mt-1 break-all text-sm text-gray-500">{user.email}</p>
                             <p className="mt-2 text-xs font-medium text-green-700">BazarDor সদস্য</p>
                         </div>
 
 
                         <div className="w-full sm:w-auto">
-                            <button
-                                onClick={handleSignOut}
-                                className="w-full rounded-xl border border-red-200 bg-white px-5 py-3 text-sm font-semibold text-red-600 transition hover:bg-red-50 sm:w-auto"
-                            >
+                            <button onClick={handleSignOut}
+                                className="w-full rounded-xl border border-red-200 bg-white px-5 py-3 text-sm font-semibold text-red-600 transition hover:bg-red-50 sm:w-auto">
                                 সাইন আউট
                             </button>
                         </div>
@@ -94,45 +91,15 @@ const ProfilePage = () => {
                 </section>
 
 
-                <form onSubmit={handleUpdateProfile}>
-                    <section className="mt-5 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:mt-6 sm:p-8">
-                        <div className="mb-6 border-b border-gray-100 pb-4">
-                            <h2 className="text-xl font-bold text-gray-900 sm:text-2xl">
-                                ব্যক্তিগত তথ্য
-                            </h2>
-                            <p className="mt-1 text-sm text-gray-500">
-                                আপনার প্রোফাইলের তথ্য আপডেট করুন।
-                            </p>
-                        </div>
 
-                        <div className="grid gap-2">
-                            <label
-                                htmlFor="name"
-                                className="text-sm font-semibold text-gray-700"
-                            >
-                                নাম
-                            </label>
 
-                            <input
-                                id="name"
-                                type="text"
-                                name="name"
-                                defaultValue={user.name || ""}
-                                className="input h-12 w-full rounded-xl border-gray-300 bg-white focus:border-green-600 focus:outline-none"
-                                placeholder="আপনার নাম লিখুন"
-                            />
-                        </div>
-
-                        <div className="mt-6 flex justify-end">
-                            <button
-                                type="submit"
-                                className="w-full rounded-xl bg-green-700 px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-green-800 sm:w-auto"
-                            >
-                                আপডেট
-                            </button>
-                        </div>
-                    </section>
-                </form>
+                <div className="mt-6 flex justify-end">
+                    <Link href="/UpdateProfile"
+                        className="w-full rounded-xl bg-green-700 px-6 py-3 text-sm font-bold text-white shadow-sm transition hover:bg-green-800 sm:w-auto"
+                    >
+                        পরিবর্তন কর
+                    </Link>
+                </div>
 
             </div>
         </main>

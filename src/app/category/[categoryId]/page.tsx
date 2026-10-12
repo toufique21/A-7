@@ -2,7 +2,7 @@
 
 import Card from "@/app/components/Card";
 import { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
+import { notFound, useParams } from "next/navigation";
 
 interface Daata {
   id: number;
@@ -49,6 +49,9 @@ const CategoryIdPage = () => {
 
     if (categoryId) {
       fetchProducts();
+    }
+    if(!categoryId){
+        notFound()
     }
   }, [categoryId]);
 

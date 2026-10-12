@@ -27,9 +27,9 @@ const HeroPage = () => {
             </p>
 
             <div className="pt-3 sm:pt-4">
-              <Link href="#library"
+              <a href="#library"
                 className="inline-flex items-center justify-center rounded-xl bg-green-700 px-5 py-3 text-sm font-bold text-white shadow-sm transition-colors duration-200 hover:bg-green-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700">সব পণ্য দেখুন
-              </Link>
+              </a>
             </div>
           </div>
 
