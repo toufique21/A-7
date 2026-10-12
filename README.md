@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+#----- 🛒 বাজার দর (BazarDor)
 
-## Getting Started
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+#----- বাজার দর is a responsive web application that allows users to explore daily prices of essential products in Bangladesh. It provides product details, market-wise price comparisons, price trends, and category-based browsing in one place.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+#----- Key Features
 
-## Learn More
+Daily Price Updates: Browse prices of essential products with price change indicators.
 
-To learn more about Next.js, take a look at the following resources:
+Product Categories: Explore products by category with sorting options.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Product Details: View minimum, maximum, and average prices, along with market-wise pricing.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Authentication: Secure sign-in and sign-up using email/password and social login.
 
-## Deploy on Vercel
+Protected Routes: Restrict access to product details and other authorized pages.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Responsive Design: Optimized for mobile, tablet, and desktop devices.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+User Profile: View and update profile information.
+
+Loading & Notifications: Skeleton loaders and toast notifications for a better user experience.
+
+Custom 404 Page: Friendly error page for invalid routes.
+
+
+
+#----- Technologies Used
+
+Next.js (App Router)
+
+React
+
+TypeScript
+
+Tailwind CSS
+
+DaisyUI
+
+Better Auth
+
+MongoDB
+
+React Hot Toast
